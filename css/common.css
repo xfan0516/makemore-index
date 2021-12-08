@@ -1,0 +1,50 @@
+
+
+@media only screen and (max-width: 540px) {
+  html {
+    font-size: calc(100vw / (540 / 16));
+  }
+}
+@media only screen and (min-width: 540px) {
+  html {
+    font-size: 16px;
+  }
+}
+.v-label {
+  display: flex;
+  align-items: center;
+  padding: .5rem;
+  height: 2rem;
+  font-size: .9rem;
+}
+.v-label .label-r {
+  flex: 1;
+  text-align: left;
+}
+.v-label .label-l {
+  text-align: left;
+  padding: 0 .5rem;
+  font-size: 1rem;
+}
+.vheader {
+  padding-top: 1rem;
+  margin: 0 auto;
+  width: 98%;
+  max-width: 1200px;
+}
+.vheader .nav {
+  margin: 0 -.5rem
+}
+.vheader .nav-item {
+  padding: 0 .5rem;
+}
+.vheader .nav-link {
+  border: 1px solid #409EFF;
+  border-radius: .2rem;
+  color: #666;
+}
+.vheader .active {
+  color: #000;
+  border: 1px solid #93dfe4;
+  background-color: #93dfe4;
+}

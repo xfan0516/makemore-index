@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="xiao bai" content="makemore trading system">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>日益元金融交易系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css"></link>
+    <link rel="stylesheet" type="text/css" href="param.css"></link>
+    <link rel="stylesheet" type="text/css" href="sttable.css"></link>
+    <link rel="shortcut icon" href="/static/accounts/img/logo.ico">
+</head>
+
+<body class="strategy-page">
+    <div class="vheader">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">首页</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/test1.html">其他1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/test2.html">其他2</a>
+            </li>
+          </ul>
+    </div>
+    
+    <section class="h-100">
+        <form method="post" class="form-signin" action="/center/" novalidate="">
+            <input type="hidden" name="csrfmiddlewaretoken" value="FRfWA3BCstgUmc8NhCHXBGeiqoTMWooFGpFLd0r73HpTO7ufZQ1oiQD2uurm27fg"> 
+            <div class='param-block'>
+                <div class="v-label">
+                    <div class="label-l">
+                        策略条号:
+                    </div>
+                    <div class="label-r">
+                        <input type="text" name="strategy_uuid" class="stparam param-value code-str-param" readonly="readonly" value="288be0ab-2aad-48eb-99ae-d193219207d2" data-tip="None" required id="id_strategy_uuid">    
+                    </div>
+                </div>
+                <div class="v-label">
+                    <div class="label-l">
+                        策略名称:
+                    </div>
+                    <div class="label-r">
+                        <input type="text" name="strategy_name" class="stparam param-value strategy-name-param" readonly="readonly" value="grid--510050.SH--2021-12-07--2" required id="id_strategy_name">    
+                    </div>
+                </div>
+                <div class="v-label">
+                    <div class="label-l">
+                        证券名称:
+                    </div>
+                    <div class="label-r">
+                            <input type="text" name="code_str" class="stparam param-value code-str-param" readonly="readonly" value="50ETF" required id="id_code_str">    
+                    </div>
+                </div>
+                <div class="v-label">
+                    <div class="label-l">
+                        证券代码:
+                    </div>
+                    <div class="label-r">
+                        <input type="text" name="code" class="stparam param-value code-param" value="510050.SH" required id="id_code">                                   
+                    </div>
+                </div>
+                <div class="v-label">
+                    <div class="label-l">
+                        启动时间:
+                    </div>
+                    <div class="label-r">
+                        <input type="datetime-local" name="start_time" class="stparam param-value start-time-param param-time" required id="id_start_time">   
+                    </div>
+                </div>
+
+
+                <div class='strategy-params'>
+                             
+                    <!-- <label class='stparam param-text start-time'>启动时间:</label><input type="datetime-local" name="start_time" class="stparam param-value start-time-param param-time" required id="id_start_time">    -->
+                    <!--<label class='stparam param-text auto-enable-text'>自动启动</label>--> <input type="checkbox" name="auto_enable" class="auto-enable tips" data-tip="自动启动" id="id_auto_enable">    
+                    <label class='stparam param-text end-mode'>终止方式:</label><select name="end_mode" class="stparam param-value end-mode-param" id="id_end_mode">
+  <option value="0">自然结束</option>
+
+  <option value="1">永久持续</option>
+
+  <option value="2">具体时间</option>
+
+</select>    
+                    <label class='stparam param-text end-time'>终止时间:</label> <input type="datetime-local" name="end_time" class="stparam param-value end-time-param param-time" value="2021-12-07T19:03:31" required id="id_end_time">    
+                    <label class='stparam param-text base'>基准价:</label> <input type="number" name="base_price" class="stparam param-value base-param" step="0.001" acc="0.001" id="id_base_price">      
+                    <label class='stparam param-text start-price'>启动价格:</label> <input type="datetime-local" name="start_price" class="stparam param-value start-price-param param-time" required id="id_start_price">                    
+                </div>
+                <div class='strategy-params strategy-params3'>
+                                       
+                    <label class='stparam param-text direction'>策略方向:</label> <select name="direction" class="stparam param-value param-value5 direction-param" type="select_direction" id="id_direction">
+  <option value="0" style="color:#00F">卖出</option>
+
+  <option value="1" style="color:#F00">买入</option>
+
+</select>      
+                    <label class='stparam param-text total-text'> 总量:</label> <input type="number" name="total" class="stparam param-value param-value5 total" step="any" required id="id_total">    
+                    <label class='stparam param-text total-text'> 总量模式:</label> <select name="total_type" class="stparam param-value param-value5 total-type-param" id="id_total_type">
+  <option value="0">金额</option>
+
+  <option value="1">股数</option>
+
+</select>    
+                    <label class='stparam param-text count-text'>档位数量:</label> <input type="number" name="count" class="stparam param-value param-value5 count" id="id_count">    
+                    <label class='stparam param-text spread-text'>档位价差:</label> <input type="number" name="spread" class="stparam param-value param-value5 spread" step="any" required id="id_spread">             
+                </div>
+                <div class='strategy-params'>
+                                                   
+                    <label class='stparam param-text liq-text'>买卖价差:</label> <input type="number" name="liq" class="stparam param-value param-value5 liq" step="any" required id="id_liq">    
+                    <label class='stparam param-text stmax-text'>策略上限:</label> <input type="number" name="max" class="stparam param-value5 max" step="any" id="id_max">    
+                    <label class='stparam param-text code-str'>策略下限:</label> <input type="number" name="min" class="stparam param-value5 min" step="any" id="id_min">    
+                    <label class='stparam param-text code-str'>可用金额:</label> <input type="number" name="limit_amount" class="stparam param-value5 limit_amount-param" step="any" id="id_limit_amount">    
+                    <label class='stparam param-text code-str'>可用持仓:</label> <input type="number" name="limit_position" class="stparam param-value5 limit_position-param" step="any" id="id_limit_position">   
+                </div>
+                
+            </div>
+            <div class='op-btns'>
+                <button type="submit" name='submit' value='run' class="btn btn-run btn-op-left ">
+				    运行
+		        </button>
+                <button type="submit" name='submit' value='stop' class="btn btn-stop btn-op-left ">
+			    	暂停
+		        </button>
+                <button type="submit" name='submit' value='delete' class="btn btn-delete btn-op-right ">
+			    	删除
+		        </button>
+                <button type="submit" name='submit' value='change' class="btn btn-change btn-op-right ">
+			    	修改
+		        </button>
+                <button type="submit" name='submit' value='add' class="btn btn-add btn-op-right ">
+			    	添加
+		        </button>
+            </div>
+        </form>
+            <div class='strategy-table-div'>
+                <table class='strategy-table' align='center' cellspacing=2px id='sttable'>
+                    <tr class='st-header table-header'>
+                        <th class='st-header'>勾选</th>
+                        <th class='st-header'>序号</th>
+                        <th class='st-header'>运行状态</th>
+                        <th class='st-header'>策略条号</th>
+                        <th class='st-header'>策列名称</th>
+                        <th class='st-header'>证券名称</th>
+                        <th class='st-header'>证券代码</th>
+                        <th class='st-header'>策略方向</th>
+                        <th class='st-header'>基准价</th>
+                        <th class='st-header'>总量</th>
+                        <th class='st-header'>档位数量</th>
+                        <th class='st-header'>档位价差</th>
+                        <th class='st-header'>买卖价差</th>
+                        <th class='st-header'>策略上限</th>
+                        <th class='st-header'>策略下限</th>
+                        <th class='st-header'>终止时间</th>
+                        <th class='st-header'>操作</th>
+                    </tr>
+                    <tbody class='table-body' id='tbody' name='st-tbody'>
+                    </tbody>
+                </table>
+            </div>
+            <div class='strategy-log' data-spy="scroll">
+                <div class='log-header'>
+                    <span class='l-hear log-title'>交易日志</span>
+                    <button class='l-hear log-clean log-right' >清空</button>
+                    <button class='l-hear log-enable log-right' >关闭日志显示</button>
+                    <select class='l-hear log-select log-right' >日志筛选</select>
+                </div>
+                <div class='log-view' v-if="log_status" v-for="(item,index) in logs">
+                    <p >开始交易...</p>
+                    <p >策略池检测...</p>
+                    <p >策略[1]检查完毕...</p>
+                    <p >策略[2]检查完毕...</p>
+                    <p >策略[3]检查完毕...</p>
+                    <p >策略[4]检查完毕...</p>
+                    <p >策略[5]检查完毕...</p>
+                    <p >策略[6]检查完毕...</p>
+                    <p >全部策略检测完毕，无异常...</p>
+                </div>
+            </div>
+    </section>
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="/static/accounts/js/login.js " type="text/javascript"></script>
+    <script src="/static/strategy/js/param.js " type="text/javascript"></script>
+    <script src="/static/strategy/js/sttable.js " type="text/javascript"></script>
+
+</body>
+
+</html>

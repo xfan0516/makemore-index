@@ -1,0 +1,47 @@
+.strategy-table-div {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.strategy-table {
+    width: 98%;
+    border: 1px solid;
+    border-color: rgb(14, 67, 77);
+    font-size: 0.6em;
+    margin-top: 2%;
+    text-align: center;
+    background-color: rgb(147, 223, 228);
+    height: 20%;
+}
+
+.st-header {
+    border: 1px solid;
+    border-color: rgb(14, 67, 77);
+    font-size: 0.6em;
+    margin-top: 2%;
+    text-align: center;
+    background-color: rgb(107, 140, 162);
+}
+
+.st-cell {
+    border: 1px solid;
+    border-color: rgb(14, 67, 77);
+}
+
+.edit-text{
+    width:95%
+}
+
+.edit-time {
+    width:80%
+}
+
+#sttable {
+    overflow-x: scroll;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+tr.active {
+    background-color: #ecf5ff;
+  }
